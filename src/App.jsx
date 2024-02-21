@@ -99,19 +99,19 @@ const App = () => {
         </div>
       </div>
 
-      <div className='text-center'>
+      <div className='text-center text-white'>
         <h2 className='font-bold text-lg'>Selamat Datang Peserta</h2>
-        <p className='text-slate-800'>
+        <p className=''>
           <span>Acara Seminar Teuing Teu Apal Naon </span>
-          <span className='font-bold text-cyan-800'>Politeknik LP3I Kampus Tasikmalaya</span></p>
+          <span className='font-bold'>Politeknik LP3I Kampus Tasikmalaya</span></p>
       </div>
 
 
-      <div className='p-4 w-full bg-white border md:rounded-xl'>
+      <div className='p-4 mx-3 bg-white border rounded-xl'>
         <video className='rounded-xl' ref={videoRef} />
       </div>
 
-      <div className='relative py-5 w-full md:rounded-t-2xl border bg-white'>
+      <div className='relative py-5 w-full rounded-t-2xl border bg-white'>
         {
           notFound &&
           <div className='flex flex-col justify-center items-center gap-3'>
