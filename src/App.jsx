@@ -45,8 +45,7 @@ const App = () => {
 
   const getMember = (result) => {
     setShow(false);
-    // fetch(`https://api.politekniklp3i-tasikmalaya.ac.id/events/members/presence/${result.data}`)
-    fetch(`http://localhost:3034/members/presence/${result.data}`)
+    fetch(`https://api.politekniklp3i-tasikmalaya.ac.id/events/members/presence/${result.data}`)
       .then((response) => {
         if (!response.ok) {
           alert('Network Error.')
