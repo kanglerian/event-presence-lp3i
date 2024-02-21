@@ -96,10 +96,10 @@ const App = () => {
 
       <div className='flex flex-col justify-center items-center px-5 py-2 gap-4 top-0 bg-white rounded-xl border'>
         <div className='flex items-center gap-3'>
-          <img src={lp3i} className='App-logo w-40' alt="Logo LP3I" />
-          <img src={global} className='App-logo w-32' alt="Logo Global" />
-          <img src={merdeka} className='App-logo w-20' alt="Logo Merdeka" />
-          <img src={mayasari} className='App-logo w-14' alt="Logo Mayasari" />
+          <img src={lp3i} className='App-logo w-24 md:w-40' alt="Logo LP3I" />
+          <img src={global} className='App-logo w-16 md:w-32' alt="Logo Global" />
+          <img src={merdeka} className='App-logo w-10 md:w-20' alt="Logo Merdeka" />
+          <img src={mayasari} className='App-logo w-8 md:w-14' alt="Logo Mayasari" />
         </div>
       </div>
 
