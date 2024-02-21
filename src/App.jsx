@@ -4,6 +4,8 @@ import success from './assets/animasi/success.json'
 import failed from './assets/animasi/failed.json'
 import lp3i from './assets/image/lp3i.png'
 import global from './assets/image/global.png'
+import mayasari from './assets/image/mayasari.png'
+import merdeka from './assets/image/merdeka.png'
 
 import Lottie from 'lottie-react'
 
@@ -96,6 +98,8 @@ const App = () => {
         <div className='flex items-center gap-3'>
           <img src={lp3i} className='App-logo w-40' alt="Logo LP3I" />
           <img src={global} className='App-logo w-32' alt="Logo Global" />
+          <img src={merdeka} className='App-logo w-20' alt="Logo Merdeka" />
+          <img src={mayasari} className='App-logo w-14' alt="Logo Mayasari" />
         </div>
       </div>
 
