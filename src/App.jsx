@@ -22,7 +22,7 @@ const App = () => {
       target: result.phone,
       message: `Halo, terima kasih sudah registrasi!\n\n${result.notes}`
     }
-    fetch(`https://opac.politekniklp3i-tasikmalaya.ac.id:8443/send`, {
+    fetch(`https://api.politekniklp3i-tasikmalaya.ac.id/whatsappbot/send-general`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -45,7 +45,8 @@ const App = () => {
 
   const getMember = (result) => {
     setShow(false);
-    fetch(`https://api.politekniklp3i-tasikmalaya.ac.id/events/members/presence/${result.data}`)
+    // fetch(`https://api.politekniklp3i-tasikmalaya.ac.id/events/members/presence/${result.data}`)
+    fetch(`http://localhost:3034/members/presence/${result.data}`)
       .then((response) => {
         if (!response.ok) {
           alert('Network Error.')
