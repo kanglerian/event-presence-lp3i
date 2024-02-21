@@ -6,6 +6,7 @@ import lp3i from './assets/image/lp3i.png'
 import global from './assets/image/global.png'
 import mayasari from './assets/image/mayasari.png'
 import merdeka from './assets/image/merdeka.png'
+import gedung from './assets/image/gedung.jpg'
 
 import Lottie from 'lottie-react'
 
@@ -92,52 +93,52 @@ const App = () => {
   }, []);
 
   return (
-    <section className='w-full md:max-w-xl mx-auto relative h-screen flex flex-col items-center justify-between gap-3 pt-5'>
+    <section className="bg-center bg-no-repeat h-screen bg-cover bg-gray-700 bg-blend-multiply" style={{ backgroundImage: `url(${gedung})` }}>
+      <div className='w-full md:max-w-xl mx-auto relative h-screen flex flex-col items-center justify-between gap-3 pt-5'>
+        <div className='flex flex-col justify-center items-center px-5 py-2 gap-4 top-0 bg-white rounded-xl border'>
+          <div className='flex items-center gap-3'>
+            <img src={lp3i} className='App-logo w-24 md:w-40' alt="Logo LP3I" />
+            <img src={global} className='App-logo w-16 md:w-32' alt="Logo Global" />
+            <img src={merdeka} className='App-logo w-10 md:w-20' alt="Logo Merdeka" />
+            <img src={mayasari} className='App-logo w-8 md:w-14' alt="Logo Mayasari" />
+          </div>
+        </div>
 
-      <div className='flex flex-col justify-center items-center px-5 py-2 gap-4 top-0 bg-white rounded-xl border'>
-        <div className='flex items-center gap-3'>
-          <img src={lp3i} className='App-logo w-24 md:w-40' alt="Logo LP3I" />
-          <img src={global} className='App-logo w-16 md:w-32' alt="Logo Global" />
-          <img src={merdeka} className='App-logo w-10 md:w-20' alt="Logo Merdeka" />
-          <img src={mayasari} className='App-logo w-8 md:w-14' alt="Logo Mayasari" />
+        <div className='text-center text-white'>
+          <h2 className='font-bold text-lg'>Selamat Datang Peserta</h2>
+          <p className=''>
+            <span>Acara Seminar Teuing Teu Apal Naon </span>
+            <span className='font-bold'>Politeknik LP3I Kampus Tasikmalaya</span></p>
+        </div>
+
+
+        <div className='p-4 mx-3 bg-white border rounded-xl'>
+          <video className='rounded-xl' ref={videoRef} />
+        </div>
+
+        <div className='relative py-5 w-full rounded-t-2xl border bg-white'>
+          {
+            notFound &&
+            <div className='flex flex-col justify-center items-center gap-3'>
+              <Lottie loop={true} animationData={failed} className='w-14' />
+              <p className='bg-red-500 text-white px-3 py-2 text-sm rounded-lg'>Anggota tidak ditemukan!</p>
+            </div>
+          }
+
+          {
+            found &&
+            <div className='flex flex-col justify-center items-center gap-3'>
+              <Lottie loop={true} animationData={success} className='w-14' />
+              <p className='bg-emerald-500 text-white px-3 py-2 text-sm rounded-lg'>Anggota ditemukan!</p>
+              <ul className='text-base text-center space-y-1'>
+                <li><span className='font-bold'>{member.name}</span></li>
+                <li><span className='font-reguler'>{member.phone}</span></li>
+                <li><span className='font-reguler'>{member.notes}</span></li>
+              </ul>
+            </div>
+          }
         </div>
       </div>
-
-      <div className='text-center text-white'>
-        <h2 className='font-bold text-lg'>Selamat Datang Peserta</h2>
-        <p className=''>
-          <span>Acara Seminar Teuing Teu Apal Naon </span>
-          <span className='font-bold'>Politeknik LP3I Kampus Tasikmalaya</span></p>
-      </div>
-
-
-      <div className='p-4 mx-3 bg-white border rounded-xl'>
-        <video className='rounded-xl' ref={videoRef} />
-      </div>
-
-      <div className='relative py-5 w-full rounded-t-2xl border bg-white'>
-        {
-          notFound &&
-          <div className='flex flex-col justify-center items-center gap-3'>
-          <Lottie loop={true} animationData={failed} className='w-14' />
-            <p className='bg-red-500 text-white px-3 py-2 text-sm rounded-lg'>Anggota tidak ditemukan!</p>
-          </div>
-        }
-
-        {
-          found &&
-          <div className='flex flex-col justify-center items-center gap-3'>
-            <Lottie loop={true} animationData={success} className='w-14' />
-            <p className='bg-emerald-500 text-white px-3 py-2 text-sm rounded-lg'>Anggota ditemukan!</p>
-            <ul className='text-base text-center space-y-1'>
-              <li><span className='font-bold'>{member.name}</span></li>
-              <li><span className='font-reguler'>{member.phone}</span></li>
-              <li><span className='font-reguler'>{member.notes}</span></li>
-            </ul>
-          </div>
-        }
-      </div>
-
     </section>
   )
 }
