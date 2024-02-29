@@ -22,7 +22,7 @@ const App = () => {
       target: result.phone,
       message: `Terima kasih sudah regitrasi!\nBerikut ini adalah informasi mengenai tempat peserta:\n\n${result.notes}`
     }
-    fetch(`https://api.politekniklp3i-tasikmalaya.ac.id/whatsappbot/send-general`, {
+    fetch(`https://api.politekniklp3i-tasikmalaya.ac.id/whatsapp/send`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
