@@ -20,7 +20,7 @@ const App = () => {
   const sendWhatsapp = (result) => {
     let data = {
       target: result.phone,
-      message: `Terima kasih sudah regitrasi kak ${result.name}!\nBerikut ini adalah informasi mengenai tempat peserta:\n\n${result.notes}`
+      message: `Terima kasih sudah regitrasi kak *${result.name}*!\nBerikut ini adalah informasi mengenai tempat peserta:\n\n${result.notes}`
     }
     fetch(`https://api.politekniklp3i-tasikmalaya.ac.id/whatsapp/send`, {
       method: 'POST',
