@@ -9,6 +9,7 @@ import merdeka from './assets/image/merdeka.png'
 import gedung from './assets/image/gedung.jpg'
 
 import Lottie from 'lottie-react'
+import { Link } from 'react-router-dom'
 
 const App = () => {
   const videoRef = useRef(null);
@@ -92,16 +93,17 @@ const App = () => {
       <div className='w-full md:max-w-xl mx-auto relative h-screen flex flex-col items-center justify-between gap-3 pt-5'>
         <div className='flex flex-col justify-center items-center px-5 py-2 gap-4 top-0 bg-white rounded-xl border'>
           <div className='flex items-center gap-3'>
-            <img src={lp3i} className='App-logo w-24 md:w-40' alt="Logo LP3I" />
-            <img src={global} className='App-logo w-16 md:w-32' alt="Logo Global" />
-            <img src={merdeka} className='App-logo w-10 md:w-20' alt="Logo Merdeka" />
-            <img src={mayasari} className='App-logo w-8 md:w-14' alt="Logo Mayasari" />
+            <img src={lp3i} className='w-24 md:w-40' alt="Logo LP3I" />
+            <img src={global} className='w-16 md:w-32' alt="Logo Global" />
+            <img src={merdeka} className='w-10 md:w-20' alt="Logo Merdeka" />
+            <img src={mayasari} className='w-8 md:w-14' alt="Logo Mayasari" />
           </div>
         </div>
 
         <div className='text-center text-white space-y-1'>
           <h2 className='font-bold text-2xl'>Selamat Datang Peserta</h2>
           <h3 className='text-lg'>Fitnes Power Women Nations Politeknik LP3I Kampus Tasikmalaya</h3>
+          <Link to={`/data`}>Lihat Hasil</Link>
         </div>
 
 
