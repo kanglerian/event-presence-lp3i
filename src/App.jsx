@@ -20,7 +20,7 @@ const App = () => {
   const sendWhatsapp = (result) => {
     let data = {
       target: result.phone,
-      message: `Halo, terima kasih sudah registrasi!\n\n${result.notes}`
+      message: `Terima kasih sudah regitrasi!\nBerikut ini adalah informasi mengenai tempat peserta:\n\n${result.notes}`
     }
     fetch(`https://api.politekniklp3i-tasikmalaya.ac.id/whatsappbot/send-general`, {
       method: 'POST',
@@ -45,7 +45,7 @@ const App = () => {
 
   const getMember = (result) => {
     setShow(false);
-    fetch(`https://api.politekniklp3i-tasikmalaya.ac.id/events/members/presence/${result.data}`)
+    fetch(`https://api.politekniklp3i-tasikmalaya.ac.id/whatsapp/send/${result.data}`)
       .then((response) => {
         if (!response.ok) {
           alert('Network Error.')
