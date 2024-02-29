@@ -12,7 +12,6 @@ import Lottie from 'lottie-react'
 
 const App = () => {
   const videoRef = useRef(null);
-  const [show, setShow] = useState(false);
   const [found, setFound] = useState(false);
   const [notFound, setNotFound] = useState(false);
   const [member, setMember] = useState(null);
@@ -44,7 +43,6 @@ const App = () => {
   }
 
   const getMember = (result) => {
-    setShow(false);
     fetch(`https://api.politekniklp3i-tasikmalaya.ac.id/events/members/presence/${result.data}`)
       .then((response) => {
         if (!response.ok) {
@@ -53,18 +51,15 @@ const App = () => {
         return response.json();
       })
       .then((data) => {
-        console.log(data);
         if (data.status == 404) {
           setFound(false);
           setNotFound(true);
-          setShow(false);
           return setMember(null);
         }
 
         if (data.status == 200) {
           setFound(true);
           setNotFound(false);
-          setShow(true);
           if (!data.data.status) {
             sendWhatsapp(data.data);
           }
