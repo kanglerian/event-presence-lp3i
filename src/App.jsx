@@ -104,11 +104,9 @@ const App = () => {
           </div>
         </div>
 
-        <div className='text-center text-white'>
-          <h2 className='font-bold text-lg'>Selamat Datang Peserta</h2>
-          <p className=''>
-            <span>Acara Seminar Teuing Teu Apal Naon </span>
-            <span className='font-bold'>Politeknik LP3I Kampus Tasikmalaya</span></p>
+        <div className='text-center text-white space-y-1'>
+          <h2 className='font-bold text-2xl'>Selamat Datang Peserta</h2>
+          <h3 className='text-lg'>Fitnes Power Women Nations Politeknik LP3I Kampus Tasikmalaya</h3>
         </div>
 
 
