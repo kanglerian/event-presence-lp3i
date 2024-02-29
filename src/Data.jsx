@@ -23,9 +23,10 @@ const Data = () => {
 
   return (
     <div className='w-full md:max-w-3xl mx-auto py-5'>
-    <div className='flex flex-col items-center justify-center pb-5'>
-    <Link to={`/`}><img src={lp3i} className='w-24 md:w-40' alt="Logo LP3I" /></Link>
-    </div>
+      <div className='flex flex-col items-center justify-center space-y-4 mb-5'>
+        <Link to={`/`}><img src={lp3i} className='w-24 md:w-40' alt="Logo LP3I" /></Link>
+        <button type='button' onClick={getMembers} className='bg-sky-500 hover:bg-sky-600 text-white px-5 py-2 rounded-lg text-sm'>Perbarui Data</button>
+      </div>
       <div className="relative overflow-x-auto">
         <table className="w-full text-sm text-left rtl:text-right text-gray-500">
           <thead className="text-xs text-gray-700 uppercase bg-gray-50">
