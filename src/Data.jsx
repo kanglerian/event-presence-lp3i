@@ -22,7 +22,7 @@ const Data = () => {
   }, []);
 
   return (
-    <div className='w-full md:max-w-3xl mx-auto py-5'>
+    <div className='w-full md:max-w-4xl mx-auto py-5'>
       <div className='flex flex-col items-center justify-center space-y-4 mb-5'>
         <Link to={`/`}><img src={lp3i} className='w-24 md:w-40' alt="Logo LP3I" /></Link>
         <button type='button' onClick={getMembers} className='bg-sky-500 hover:bg-sky-600 text-white px-5 py-2 rounded-lg text-sm'>Perbarui Data</button>
@@ -37,6 +37,9 @@ const Data = () => {
               <th scope="col" className="px-6 py-3">
                 No. HP
               </th>
+              <th scope="col" className="px-6 py-3">
+                Posisi
+              </th>
               <th scope="col" className="px-6 py-3 rounded-tr-xl">
                 Status
               </th>
@@ -46,12 +49,15 @@ const Data = () => {
             {
               members.length > 0 ? (
                 members.map((member) =>
-                  <tr className={`${member.status ? 'bg-white' : 'bg-red-500'} border-b`}>
+                  <tr key={member.id} className={`${member.status ? 'bg-white' : 'bg-red-500'} border-b`}>
                     <th scope="row" className={`${member.status ? 'text-gray-900' : 'text-white'} px-6 py-4 font-medium whitespace-nowrap`}>
                       {member.name}
                     </th>
                     <td className={`${member.status ? 'text-gray-900' : 'text-white'} px-6 py-4`}>
                       {member.phone}
+                    </td>
+                    <td className={`${member.status ? 'text-gray-900' : 'text-white'} px-6 py-4`}>
+                      {member.notes}
                     </td>
                     <td className={`${member.status ? 'text-gray-900' : 'text-white'} px-6 py-4`}>
                       {member.status ? 'Hadir' : 'Tidak Hadir'}
